@@ -1,0 +1,43 @@
+.container {
+}
+
+.mainTitle {
+  font-size: 100px;
+}
+
+.items {
+  display: flex;
+  gap: 50px;
+}
+
+.item {
+  border: 5px solid #bbb;
+  border-radius: 5px;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  background-size: cover !important;
+}
+
+.item:nth-child(1) {
+  background: url("/illustration.jpg");
+}
+.item:nth-child(2) {
+  background: url("/website.jpg");
+}
+.item:nth-child(3) {
+  background: url("/application.jpg");
+}
+
+.item:hover .title {
+  color: #53c28b;
+}
+
+.title {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+}

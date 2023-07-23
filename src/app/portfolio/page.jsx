@@ -1,7 +1,27 @@
 import React from "react";
+import styles from "./portfolio.module.css";
+import Link from "next/link";
 
-const Blog = () => {
-  return <div>Blog</div>;
+const Portfolio = () => {
+  return (
+    <div className={styles.container}>
+      <h1 className={styles.selectTitle}>Choose a gallery</h1>
+
+      <div className={styles.items}>
+        <Link href="/portfolio/illustrations" className={styles.item}>
+          <span className={styles.title}>Illustrations</span>
+        </Link>
+
+        <Link href="/portfolio/illustrations" className={styles.item}>
+          <span className={styles.title}>Websites</span>
+        </Link>
+
+        <Link href="/portfolio/illustrations" className={styles.item}>
+          <span className={styles.title}>Applications</span>
+        </Link>
+      </div>
+    </div>
+  );
 };
 
-export default Blog;
+export default Portfolio;

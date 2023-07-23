@@ -1,7 +1,7 @@
 import React from "react";
 
-const Portfolio = () => {
-  return <div>Portfolio</div>;
+const Blog = () => {
+  return <div>Blog</div>;
 };
 
-export default Portfolio;
+export default Blog;
