@@ -1,0 +1,14 @@
+.container {
+  width: max-content;
+}
+
+.button {
+  width: 100%;
+  color: white;
+  background-color: #53c28b;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

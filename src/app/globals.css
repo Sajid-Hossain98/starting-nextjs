@@ -10,6 +10,11 @@ body {
   overflow-x: hidden;
   background-color: #111111;
   color: #ddd;
+
+  ::selection {
+    background-color: #53c28b;
+    color: #111111;
+  }
 }
 
 .container {
@@ -23,6 +28,6 @@ body {
 }
 
 a {
-  color: #fdfdfd;
+  color: #ddddddce;
   text-decoration: none;
 }

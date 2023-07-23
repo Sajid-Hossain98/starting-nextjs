@@ -24,19 +24,19 @@
   font-weight: 300;
 }
 
-.button {
-  width: max-content;
-  color: white;
-  background-color: #53c28b;
-  padding: 15px;
-  font-size: 14px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 .img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  animation: imageMovement 3s infinite ease alternate;
+}
+
+@keyframes imageMovement {
+  from {
+    transform: translateY(-10px);
+  }
+
+  to {
+    transform: translateY(10px);
+  }
 }
