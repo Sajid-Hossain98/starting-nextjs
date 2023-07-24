@@ -9,7 +9,7 @@ const Blog = () => {
       <Link href="blog/test" className={styles.container}>
         <div className={styles.imgContainer}>
           <Image
-            src="https://images.pexels.com/photos/4318822/pexels-photo-4318822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/3293148/pexels-photo-3293148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt=""
             width={400}
             height={250}
@@ -25,7 +25,7 @@ const Blog = () => {
       <Link href="blog/test" className={styles.container}>
         <div className={styles.imgContainer}>
           <Image
-            src="https://images.pexels.com/photos/4318822/pexels-photo-4318822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/3293148/pexels-photo-3293148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt=""
             width={400}
             height={250}
@@ -41,7 +41,7 @@ const Blog = () => {
       <Link href="blog/test" className={styles.container}>
         <div className={styles.imgContainer}>
           <Image
-            src="https://images.pexels.com/photos/4318822/pexels-photo-4318822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/3293148/pexels-photo-3293148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt=""
             width={400}
             height={250}
@@ -57,7 +57,7 @@ const Blog = () => {
       <Link href="blog/test" className={styles.container}>
         <div className={styles.imgContainer}>
           <Image
-            src="https://images.pexels.com/photos/4318822/pexels-photo-4318822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/3293148/pexels-photo-3293148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt=""
             width={400}
             height={250}
@@ -73,7 +73,7 @@ const Blog = () => {
       <Link href="blog/test" className={styles.container}>
         <div className={styles.imgContainer}>
           <Image
-            src="https://images.pexels.com/photos/4318822/pexels-photo-4318822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/3293148/pexels-photo-3293148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt=""
             width={400}
             height={250}
