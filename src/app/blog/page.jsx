@@ -9,13 +9,12 @@ const getData = async () => {
   if (process.env.NODE_ENV === "development") {
     apiUrl = "http://localhost:3000/api/posts";
   } else {
-    apiUrl =
-      "https://starting-nextjs-onmlsb2y5-sajid-hossain98.vercel.app/api/posts";
+    apiUrl = "https://starting-nextjs.vercel.app/api/posts";
   }
 
   //Fetching data
   const res = await fetch(apiUrl, {
-    cache: "no-store",
+    cache: "default",
   });
 
   if (!res.ok) {
