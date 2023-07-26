@@ -5,15 +5,10 @@ import { notFound } from "next/navigation";
 
 const getData = async (id) => {
   //providing different apiUrl for both development and production
-  let apiUrl;
-  if (process.env.NODE_ENV === "development") {
-    apiUrl = `http://localhost:3000/api/posts/${id}`;
-  } else {
-    apiUrl = `https://starting-nextjs.vercel.app/api/posts/${id}`;
-  }
+  const apiUrl = process.env.API_URL;
 
   //Fetching data
-  const res = await fetch(apiUrl, {
+  const res = await fetch(`${apiUrl}/api/posts/${id}`, {
     cache: "no-store",
   });
 
@@ -25,15 +20,13 @@ const getData = async (id) => {
 };
 
 const BlogPost = async ({ params }) => {
-  const data = await getData(params.id);
-
+  // const data = await getData(params.id);
   // return (
   //   <div className={styles.container}>
   //     <div className={styles.topContainer}>
   //       <div className={styles.topContent}>
   //         <h1 className={styles.title}>{data.title}</h1>
   //         <p className={styles.topDesc}>{data.desc}</p>
-
   //         <div className={styles.author}>
   //           <Image
   //             src="https://images.pexels.com/photos/1317844/pexels-photo-1317844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -54,7 +47,6 @@ const BlogPost = async ({ params }) => {
   //         />
   //       </div>
   //     </div>
-
   //     <div className={styles.content}>
   //       <p className={styles.bottomDesc}>{data.content}</p>
   //     </div>
