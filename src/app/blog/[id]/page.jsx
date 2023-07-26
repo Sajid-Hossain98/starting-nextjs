@@ -9,7 +9,7 @@ const getData = async (id) => {
   if (process.env.NODE_ENV === "development") {
     apiUrl = `http://localhost:3000/api/posts/${id}`;
   } else {
-    apiUrl = `https://learningnextone.vercel.app/api/posts/${id}`;
+    apiUrl = `https://starting-nextjs-onmlsb2y5-sajid-hossain98.vercel.app/api/posts/${id}`;
   }
 
   //Fetching data
