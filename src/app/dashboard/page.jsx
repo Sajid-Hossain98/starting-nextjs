@@ -49,6 +49,7 @@ const Dashboard = () => {
           }),
         });
         mutate();
+        e.target.reset();
         toast.success("Post added!");
       } catch (error) {
         console.log(error);
