@@ -7,6 +7,7 @@ import styles from "./dashboard.module.css";
 import Image from "next/image";
 import { ThemeContext } from "@/context/ThemeContext";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 const Dashboard = () => {
   const session = useSession();
@@ -60,14 +61,16 @@ const Dashboard = () => {
   };
 
   const handleDelete = async (id) => {
-    try {
-      await fetch(`/api/posts/${id}`, {
-        method: "DELETE",
-      });
-      mutate();
-      toast.success("Successfully deleted the post!");
-    } catch (error) {
-      toast.error("Can't delete, something went wrong!");
+    if (window.confirm("Are you sure you want to delete?")) {
+      try {
+        await fetch(`/api/posts/${id}`, {
+          method: "DELETE",
+        });
+        mutate();
+        toast.success("Successfully deleted the post!");
+      } catch (error) {
+        toast.error("Can't delete, something went wrong!");
+      }
     }
   };
 
@@ -84,21 +87,22 @@ const Dashboard = () => {
                 const { _id, title, img } = post;
 
                 return (
-                  <div className={styles.post} key={_id}>
-                    <div className={styles.imgAndTitle}>
-                      <div className={styles.imgContainer}>
-                        <Image
-                          src={img}
-                          alt={title}
-                          height={100}
-                          width={200}
-                          className={styles.img}
-                        />
+                  <div key={_id} className={styles.postsAndDeleteBtn}>
+                    <Link href={`blog/${_id}`} className={styles.post}>
+                      <div className={styles.imgAndTitle}>
+                        <div className={styles.imgContainer}>
+                          <Image
+                            src={img}
+                            alt={title}
+                            height={100}
+                            width={200}
+                            className={styles.img}
+                          />
+                        </div>
+
+                        <h2 className={styles.postTitle}>{title}</h2>
                       </div>
-
-                      <h2 className={styles.postTitle}>{title}</h2>
-                    </div>
-
+                    </Link>
                     <span
                       className={styles.delete}
                       onClick={() => handleDelete(_id)}
