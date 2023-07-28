@@ -1,0 +1,140 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.posts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-height: 60vh;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.lightPosts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.posts::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+.posts::-webkit-scrollbar-track {
+  background: white;
+}
+
+.posts::-webkit-scrollbar-thumb {
+  background: #53c38b;
+}
+
+.lightPosts::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+.lightPosts::-webkit-scrollbar-track {
+  background: black;
+}
+
+.lightPosts::-webkit-scrollbar-thumb {
+  background: #53c38b;
+}
+
+.post {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.noPosts {
+  font-size: 30px;
+  color: #53c28b;
+  text-transform: capitalize;
+}
+
+.imgAndTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.headTitle {
+  font-size: 50px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.delete {
+  color: red;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  background-color: #2f3d36;
+  border-radius: 5px;
+}
+
+.addPostForm {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input {
+  font-size: 18px;
+  background: none;
+  padding: 1rem 0.5rem;
+  border: none;
+  border: 2px solid #99999999;
+  color: #ddd;
+}
+
+.lightInput {
+  font-size: 18px;
+  background: none;
+  padding: 1rem 0.5rem;
+  border: none;
+  border: 2px solid #99999999;
+}
+
+.textarea {
+  font-size: 18px;
+  background: none;
+  padding: 1rem 0.5rem;
+  border: none;
+  border: 2px solid #99999999;
+  color: #ddd;
+}
+
+.lightTextarea {
+  font-size: 18px;
+  background: none;
+  padding: 1rem 0.5rem;
+  border: none;
+  border: 2px solid #99999999;
+}
+
+.button {
+  padding: 0.5rem 0;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #53c28b;
+  color: white;
+  border: none;
+}
