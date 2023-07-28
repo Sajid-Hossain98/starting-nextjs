@@ -59,6 +59,18 @@ const Dashboard = () => {
     }
   };
 
+  const handleDelete = async (id) => {
+    try {
+      await fetch(`/api/posts/${id}`, {
+        method: "DELETE",
+      });
+      mutate();
+      toast.success("Successfully deleted the post!");
+    } catch (error) {
+      toast.error("Can't delete, something went wrong!");
+    }
+  };
+
   if (session.status === "authenticated") {
     return (
       <div className={styles.container}>
@@ -87,7 +99,12 @@ const Dashboard = () => {
                       <h2 className={styles.postTitle}>{title}</h2>
                     </div>
 
-                    <span className={styles.delete}>X</span>
+                    <span
+                      className={styles.delete}
+                      onClick={() => handleDelete(_id)}
+                    >
+                      X
+                    </span>
                   </div>
                 );
               })
