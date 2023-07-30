@@ -3,6 +3,11 @@ import styles from "./page.module.css";
 import Hero from "public/hero.png";
 import Button from "@/components/button/Button";
 
+export const metadata = {
+  title: "Home",
+  description: "Home page of the site!",
+};
+
 export default function Home() {
   return (
     <div className={styles.container}>

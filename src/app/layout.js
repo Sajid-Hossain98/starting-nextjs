@@ -10,7 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Home",
+  title: "SH",
   description: "A next js application",
 };
 
