@@ -1,4 +1,4 @@
-import styles from "./blog.module.css";
+import styles from "./blogLoading.module.css";
 
 export default function Loading() {
   // You can add any UI inside Loading, including a Skeleton.
