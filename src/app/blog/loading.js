@@ -1,20 +1,26 @@
+import styles from "./blog.module.css";
+
 export default function Loading() {
   // You can add any UI inside Loading, including a Skeleton.
-
   return (
-    <div>
+    <div className={styles.mainLoadingContainer}>
       {[...Array(10).keys()].map((i) => (
         <div
-          key={i._id}
+          key={i}
+          className={styles.loadingContainer}
           style={{
-            display: "flex",
-            flexDirection: "column",
-            margin: "15px 0px",
-            height: "200px",
-            width: "800px",
-            backgroundColor: "#9999994f",
+            animationDelay: `${i * 0.05}s`,
           }}
-        ></div>
+        >
+          <div className={styles.loadingImgContainer}>
+            <div className={styles.loadingImg} />
+          </div>
+
+          <div className={styles.loadingContent}>
+            <h1 className={styles.loadingTitle}></h1>
+            <p className={styles.loadingDesc}></p>
+          </div>
+        </div>
       ))}
     </div>
   );
