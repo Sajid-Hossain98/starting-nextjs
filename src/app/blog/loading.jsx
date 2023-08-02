@@ -1,27 +1,27 @@
 import React from "react";
 import styles from "./blog.module.css";
 
-const getData = async () => {
-  const apiUrl = process.env.API_URL;
+// const getData = async () => {
+//   const apiUrl = process.env.API_URL;
 
-  //Fetching data
-  const res = await fetch(`${apiUrl}/api/posts`, {
-    cache: "no-store",
-  });
+//   //Fetching data
+//   const res = await fetch(`${apiUrl}/api/posts`, {
+//     cache: "no-store",
+//   });
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch");
-  }
+//   if (!res.ok) {
+//     throw new Error("Failed to fetch");
+//   }
 
-  return res.json();
-};
+//   return res.json();
+// };
 
 const Loading = async () => {
-  const data = await getData();
+  // const data = await getData();
 
   return (
-    <div className={styles.mainLoadingContainer}>
-      {[...Array(data.length).keys()].map((i) => (
+    <div>
+      {/* {[...Array(data.length).keys()].map((i) => (
         <div
           key={i._id}
           className={styles.loadingContainer}
@@ -38,6 +38,10 @@ const Loading = async () => {
             <p className={styles.loadingDesc}></p>
           </div>
         </div>
+      ))} */}
+
+      {[...Array(10).keys()].map((i) => (
+        <div key={i} className={styles.mainLoadingContainer}></div>
       ))}
     </div>
   );
