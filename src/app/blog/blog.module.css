@@ -27,9 +27,9 @@
 }
 
 .mainLoadingContainer {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 30px; */
   margin-top: 50px;
   width: 800px;
   height: 200px;
@@ -37,7 +37,7 @@
   animation: pulse 2s infinite;
 }
 
-.loadingContainer {
+/* .loadingContainer {
   display: flex;
   align-items: center;
   gap: 50px;
@@ -81,4 +81,4 @@
   100% {
     opacity: 1;
   }
-}
+} */
