@@ -41,7 +41,10 @@ const Loading = async () => {
       ))} */}
 
       {[...Array(10).keys()].map((i) => (
-        <div key={i} className={styles.mainLoadingContainer}></div>
+        <div
+          key={i}
+          style={{ height: "200px", width: "500px", backgroundColor: "#999" }}
+        ></div>
       ))}
     </div>
   );

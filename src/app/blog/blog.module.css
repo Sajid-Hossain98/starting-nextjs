@@ -26,16 +26,16 @@
   color: #9999994f;
 }
 
-.mainLoadingContainer {
-  /* display: flex;
+/* .mainLoadingContainer {
+  display: flex;
   flex-direction: column;
-  gap: 30px; */
+  gap: 30px;
   margin-top: 50px;
   width: 800px;
   height: 200px;
   background-color: #9999994f;
   animation: pulse 2s infinite;
-}
+} */
 
 /* .loadingContainer {
   display: flex;
