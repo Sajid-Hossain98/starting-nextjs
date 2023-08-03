@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   gap: 50px;
-  animation: pulse 2s infinite;
+  animation: pulse 1s infinite;
 }
 
 .loadingImgContainer {
