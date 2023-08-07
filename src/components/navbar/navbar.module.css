@@ -46,12 +46,23 @@
     position: relative;
   }
 
+  .darkHamburger,
+  .darkHamburger::before,
+  .darkHamburger::after {
+    background: #ffffff;
+  }
+
+  .lightHamburger,
+  .lightHamburger::before,
+  .lightHamburger::after {
+    background: #111;
+  }
+
   .hamburger,
   .hamburger::before,
   .hamburger::after {
     height: 2px;
     width: 30px;
-    background: white;
     transition: transform 350ms ease-in-out, opacity 200ms linear;
   }
 
@@ -80,5 +91,10 @@
 
   .openMenu .hamburger::after {
     transform: rotate(-90deg) translate(6px);
+  }
+
+  /* sidebar design */
+  .sideBar {
+    width: 100vw;
   }
 }

@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Link from "next/link";
 import styles from "./navbar.module.css";
 import DarkModeToggle from "../darkModeToggle/DarkModeToggle";
 import { signOut, useSession } from "next-auth/react";
 import SideNavbar from "./SideNavbar";
+import { ThemeContext } from "@/context/ThemeContext";
 
 export const links = [
   {
@@ -44,6 +45,8 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const session = useSession();
 
+  const { mode } = useContext(ThemeContext);
+
   return (
     <div className={styles.container}>
       <Link href="/" className={styles.logo}>
@@ -65,12 +68,22 @@ const Navbar = () => {
             }`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <span className={styles.hamburger}></span>
+            <span
+              className={`${styles.hamburger} ${
+                mode === "dark"
+                  ? `${styles.darkHamburger}`
+                  : `${styles.lightHamburger}`
+              }`}
+            ></span>
           </button>
 
-          {/* <div className={styles.sideBar}>
+          <div
+            className={`${styles.sideBar} ${
+              isMenuOpen ? `${styles.navOpen}` : ""
+            }`}
+          >
             <SideNavbar />
-          </div> */}
+          </div>
         </div>
 
         {session.status === "authenticated" && (
