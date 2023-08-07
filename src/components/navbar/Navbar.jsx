@@ -82,7 +82,12 @@ const Navbar = () => {
               isMenuOpen ? `${styles.navOpen}` : ""
             }`}
           >
-            <SideNavbar />
+            <SideNavbar
+              signOut={signOut}
+              session={session}
+              isMenuOpen={isMenuOpen}
+              setIsMenuOpen={setIsMenuOpen}
+            />
           </div>
         </div>
 

@@ -29,6 +29,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .link {
+    display: none;
+  }
+
   .sideNavbar {
     display: block;
   }
@@ -96,5 +100,47 @@
   /* sidebar design */
   .sideBar {
     width: 100vw;
+    height: calc(100vh - 100px);
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    background-color: #53c28b;
+    color: #111;
+    padding: 1rem 0 0;
+    transform: translateX(100%);
+    transition: transform 300ms cubic-bezier(0.5, 0, 0.5, 1);
+    z-index: 9;
+  }
+
+  .sideBarLinks {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .linkMini {
+    padding: 1rem 0;
+    background-color: #111;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+  }
+
+  .logoutMini {
+    width: 100%;
+    padding: 1rem 0;
+    border: none;
+    background-color: #53c28b;
+    border-radius: 3px;
+    font-size: inherit;
+    cursor: pointer;
+  }
+
+  .navOpen {
+    transform: translateX(0%);
   }
 }

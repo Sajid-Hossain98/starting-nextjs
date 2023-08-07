@@ -43,3 +43,15 @@ a {
   background-color: #111;
   color: white;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 0 15px;
+  }
+}
