@@ -1,12 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import styles from "./navbar.module.css";
 import DarkModeToggle from "../darkModeToggle/DarkModeToggle";
 import { signOut, useSession } from "next-auth/react";
+import SideNavbar from "./SideNavbar";
 
-const links = [
+export const links = [
   {
     id: 1,
     title: "Home",
@@ -40,6 +41,7 @@ const links = [
 ];
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const session = useSession();
 
   return (
@@ -55,6 +57,21 @@ const Navbar = () => {
             {link.title}
           </Link>
         ))}
+
+        <div className={styles.sideNavbar}>
+          <button
+            className={`${styles.toggleMenu} ${
+              isMenuOpen ? `${styles.openMenu}` : ""
+            }`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <span className={styles.hamburger}></span>
+          </button>
+
+          {/* <div className={styles.sideBar}>
+            <SideNavbar />
+          </div> */}
+        </div>
 
         {session.status === "authenticated" && (
           <button className={styles.logout} onClick={signOut}>
