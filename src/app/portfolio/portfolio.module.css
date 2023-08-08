@@ -1,4 +1,7 @@
 .container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .mainTitle {
@@ -7,13 +10,14 @@
 
 .items {
   display: flex;
+  align-items: center;
   gap: 50px;
 }
 
 .item {
   border: 5px solid #bbb;
   border-radius: 5px;
-  width: 300px;
+  width: 100%;
   height: 400px;
   position: relative;
   background-size: cover !important;
@@ -40,4 +44,41 @@
   font-size: 35px;
   font-weight: bold;
   color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .mainTitle {
+    font-size: 70px;
+  }
+
+  .items {
+    gap: 30px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .mainTitle {
+    font-size: 50px;
+  }
+
+  .selectTitle {
+    font-size: 20px;
+  }
+
+  .items {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .item {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 25px;
+  }
 }

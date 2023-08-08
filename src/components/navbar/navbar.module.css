@@ -100,9 +100,9 @@
   /* sidebar design */
   .sideBar {
     width: 100vw;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 50px);
     position: absolute;
-    top: 10%;
+    top: 13%;
     left: 0;
     background-color: #53c28b;
     color: #111;
