@@ -50,3 +50,25 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .loadingContainer {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .loadingImgContainer {
+    width: 100%;
+  }
+
+  .loadingContent {
+    width: 100%;
+  }
+
+  .loadingTitle {
+    width: 100%;
+  }
+  .loadingDesc {
+    width: 100%;
+  }
+}
