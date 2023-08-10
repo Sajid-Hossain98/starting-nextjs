@@ -24,8 +24,12 @@ const postSchema = new Schema(
       type: String,
       required: true,
     },
+    userImg: {
+      type: String,
+      required: false,
+    },
   },
   { timestamps: true }
 );
 
-export default mongoose.models.Post || mongoose.model("Post", postSchema);
+export default mongoose.models.Posts || mongoose.model("Posts", postSchema);

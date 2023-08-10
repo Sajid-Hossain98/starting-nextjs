@@ -37,8 +37,12 @@ const BlogPost = async ({ params }) => {
           <p className={styles.topDesc}>{data.desc}</p>
           <div className={styles.author}>
             <Image
-              src="https://images.pexels.com/photos/1317844/pexels-photo-1317844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
+              src={
+                data.userImg
+                  ? data.userImg
+                  : "https://images.pexels.com/photos/1317844/pexels-photo-1317844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              }
+              alt="default user avatar"
               width={40}
               height={40}
               className={styles.avatar}

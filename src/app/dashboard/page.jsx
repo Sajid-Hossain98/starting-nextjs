@@ -47,6 +47,7 @@ const Dashboard = () => {
             img,
             content,
             username: session.data.user.name,
+            userImg: session.data.user.image ?? "",
           }),
         });
         mutate();
@@ -80,7 +81,7 @@ const Dashboard = () => {
         <div className={mode === "light" ? styles.lightPosts : styles.posts}>
           {isLoading ? (
             <p>Loading....</p>
-          ) : data.length > 0 ? (
+          ) : data?.length > 0 ? (
             data
               .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
               .map((post) => {

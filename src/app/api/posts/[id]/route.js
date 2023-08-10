@@ -1,4 +1,4 @@
-import Post from "@/models/Post";
+import Posts from "@/models/Posts";
 import connect from "@/utils/db";
 import { NextResponse } from "next/server";
 
@@ -8,7 +8,7 @@ export const GET = async (request, { params }) => {
   try {
     await connect();
 
-    const post = await Post.findById(id);
+    const post = await Posts.findById(id);
 
     return new NextResponse(JSON.stringify(post), { status: 200 });
   } catch (error) {
@@ -22,7 +22,7 @@ export const DELETE = async (request, { params }) => {
   try {
     await connect();
 
-    await Post.findByIdAndDelete(id);
+    await Posts.findByIdAndDelete(id);
 
     return new NextResponse("Deleted the post successfully!", { status: 200 });
   } catch (error) {

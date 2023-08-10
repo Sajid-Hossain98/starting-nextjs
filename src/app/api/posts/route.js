@@ -1,4 +1,4 @@
-import Post from "@/models/Post";
+import Posts from "@/models/Posts";
 import connect from "@/utils/db";
 import { NextResponse } from "next/server";
 
@@ -9,7 +9,7 @@ export const GET = async (request) => {
   try {
     await connect();
 
-    const posts = await Post.find(username && { username });
+    const posts = await Posts.find(username && { username });
 
     return new NextResponse(JSON.stringify(posts), { status: 200 });
   } catch (error) {
@@ -20,7 +20,9 @@ export const GET = async (request) => {
 export const POST = async (request) => {
   const body = await request.json();
 
-  const newPost = new Post(body);
+  const newPost = new Posts(body);
+
+  console.log(newPost);
 
   try {
     await connect();
