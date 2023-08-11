@@ -14,7 +14,7 @@ const About = () => {
         <Image
           src="https://images.pexels.com/photos/270669/pexels-photo-270669.jpeg?auto=compress&cs=tinysrgb&w=1600"
           fill={true}
-          alt="web"
+          alt="about page image"
           className={styles.img}
         />
         <div className={styles.imgText}>
