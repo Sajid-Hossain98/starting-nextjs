@@ -23,6 +23,13 @@
   font-size: 16px;
 }
 
+.createNewAccount {
+  width: 30%;
+  text-align: center;
+  padding: 1.2rem 0;
+  background-color: #537ac2;
+}
+
 .button {
   border: none;
   background: none;
@@ -44,6 +51,10 @@
 
 @media screen and (max-width: 768px) {
   .form {
+    width: 100%;
+  }
+
+  .createNewAccount {
     width: 100%;
   }
 
