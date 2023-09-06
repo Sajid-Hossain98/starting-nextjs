@@ -23,3 +23,15 @@
   border-radius: 50%;
   position: absolute;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 48px;
+    height: 28px;
+  }
+
+  .ball {
+    width: 20px;
+    height: 20px;
+  }
+}
